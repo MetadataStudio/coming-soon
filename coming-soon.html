@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metadata Studio | Coming Soon - The Future of Metadata Generation</title>
+    <meta name="description" content="The new version of Metadata Studio is launching soon! Get ready for an AI-powered studio with multi-provider support (Gemini, OpenAI), advanced automation, and a privacy-first design to instantly generate titles, descriptions, and keywords for your media. Sign up for early access and updates.">
+    <meta name="keywords" content="metadata generator, AI metadata, image keywords, video keywords, SEO, stock photography, stock video, creative workflow, coming soon, Gemini API, OpenAI, Anthropic, content creator tools, EXIF editor, IPTC editor, workflow automation">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://metadatastudio.app" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metadatastudio.app">
+    <meta property="og:title" content="Metadata Studio | The Future of Metadata Generation is Coming Soon">
+    <meta property="og:description" content="Supercharge your workflow with multi-provider AI, advanced automation, and a privacy-first design. Sign up for early access.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/MetadataStudio/media/refs/heads/main/img/MetadataStudio-Social-Card-by-AFLAHZAMAN.png">
+    <meta property="og:site_name" content="Metadata Studio">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metadatastudio.app/coming-soon.html">
+    <meta property="twitter:title" content="Metadata Studio | The Future of Metadata Generation is Coming Soon">
+    <meta property="twitter:description" content="Supercharge your workflow with multi-provider AI, advanced automation, and a privacy-first design. Sign up for early access.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/MetadataStudio/media/refs/heads/main/img/MetadataStudio-Social-Card-by-AFLAHZAMAN.png">
+    <meta name="twitter:creator" content="@itsaflahzaman">
+
+    <link rel="icon" href="https://raw.githubusercontent.com/MetadataStudio/media/refs/heads/main/img/MetadataStudio-Logo-by-AFLAHZAMAN.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                primary: '#065f46', // emerald-800
+                light: '#ecfdf5', // emerald-50
+                accent: '#10b981', // emerald-500
+              },
+            },
+          }
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Metadata Studio",
+      "description": "An AI-powered studio to instantly generate titles, descriptions, and keywords for images and videos. Streamline your creative workflow, optimize for SEO, and save hours of manual work. The new version features multi-provider AI support (Google Gemini, OpenAI, Anthropic), advanced automation tools, and a privacy-first design.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Web",
+      "author": {
+        "@type": "Person",
+        "name": "AFLAH ZAMAN",
+        "url": "https://aflahzaman.com"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "AFLAH ZAMAN",
+        "url": "https://aflahzaman.com"
+      },
+       "featureList": [
+            "AI-Powered Metadata Generation (Titles, Descriptions, Keywords)",
+            "Support for Google Gemini, OpenAI, Anthropic, and custom models",
+            "Privacy-First Design: Your files are processed securely in your browser.",
+            "Dedicated Image and Video tools",
+            "Bulk Export to Shutterstock-compatible CSV",
+            "Read and Write Image EXIF/IPTC Data",
+            "Automatic file renaming based on titles",
+            "Download all media and metadata in a single ZIP archive"
+       ],
+      "potentialAction": {
+        "@type": "SubscribeAction",
+        "target": {
+          "@type": "EntryPoint",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLScfq5jkXZveUdXCTuZN3XQpnOWi75lCWyK209o7kk2Pn41SuA/viewform"
+        }
+      }
+    }
+    </script>
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(0.625rem); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+       .fade-in-delay-1 { animation-delay: 0.2s; opacity: 0; }
+       .fade-in-delay-2 { animation-delay: 0.4s; opacity: 0; }
+       .fade-in-delay-3 { animation-delay: 0.6s; opacity: 0; }
+      .modal-fade-in {
+        animation: fadeIn 0.3s ease-out forwards;
+      }
+    </style>
+</head>
+<body class="bg-brand-light dark:bg-black text-base text-neutral-800 dark:text-neutral-200 font-sans antialiased">
+
+    <div class="relative min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden">
+        <div class="absolute inset-0 -z-10">
+            <div class="absolute inset-0 bg-gradient-to-b from-white to-brand-light dark:from-neutral-950 dark:to-black opacity-60"></div>
+            <div class="absolute left-1/2 top-0 h-[50rem] w-[50rem] -translate-x-1/2 rounded-full bg-brand-accent/10 blur-3xl"></div>
+        </div>
+
+        <main class="text-center z-10 w-full max-w-5xl mx-auto">
+            <div class="fade-in">
+                <div class="flex items-center justify-center gap-3 mb-6">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-brand-primary dark:text-brand-accent">
+                        <path d="M15.75 3H7.25C5.86929 3 4.75 4.11929 4.75 5.5V18.5C4.75 19.8807 5.86929 21 7.25 21H16.75C18.1307 21 19.25 19.8807 19.25 18.5V8.25L15.75 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M15.25 3.5V8.75H19.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12.5 13.5L13 12.5L14 12L13 11.5L12.5 10.5L12 11.5L11 12L12 12.5L12.5 13.5Z" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M9.5 18.5L10 17.5L11 17L10 16.5L9.5 15.5L9 16.5L8 17L9 17.5L9.5 18.5Z" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
+                        Metadata Studio
+                    </h1>
+                </div>
+
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-900 dark:text-white max-w-4xl mx-auto">
+                    Re-imagined for the AI Era.
+                </h2>
+                <p class="mt-6 text-lg lg:text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
+                    We're building the next generation of Metadata Studio from the ground up to be the smartest, fastest, and most secure way to manage your creative assets. Get ready to supercharge your workflow.
+                </p>
+            </div>
+
+            <div class="mt-16 fade-in fade-in-delay-1">
+                <button id="open-modal-btn" class="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-bold text-white bg-brand-primary rounded-full shadow-lg hover:bg-opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary transition-all transform hover:scale-105">
+                    <span>Get Early Access</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </button>
+                <p class="mt-4 text-sm text-neutral-500">Be the first to know when we launch.</p>
+            </div>
+        </main>
+
+        <footer class="absolute bottom-0 left-0 right-0 p-4 z-10">
+            <div class="text-center text-xs text-neutral-500 dark:text-neutral-400">
+                <p>
+                   &copy; <span id="copyright-year">2025</span>
+                   <a href="https://aflahzaman.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-brand-primary dark:text-brand-accent hover:underline transition-colors">
+                      AFLAH ZAMAN
+                   </a>
+                   . All rights reserved.
+               </p>
+            </div>
+       </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="form-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="relative w-full max-w-2xl m-4 modal-fade-in">
+             <div class="bg-white/50 dark:bg-neutral-900/50 p-1 sm:p-2 rounded-2xl shadow-lg">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScfq5jkXZveUdXCTuZN3XQpnOWi75lCWyK209o7kk2Pn41SuA/viewform?embedded=true" width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0" class="rounded-xl">Loading…</iframe>
+            </div>
+            <button id="close-modal-btn" class="absolute -top-3 -right-3 z-10 p-1 bg-white dark:bg-neutral-800 rounded-full text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700 shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('form-modal');
+            const openBtn = document.getElementById('open-modal-btn');
+            const closeBtn = document.getElementById('close-modal-btn');
+
+            const openModal = () => {
+                if (!modal) return;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeModal = () => {
+                if (!modal) return;
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            };
+
+            if (openBtn) {
+                openBtn.addEventListener('click', openModal);
+            }
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeModal);
+            }
+
+            // Close modal on backdrop click
+            if (modal) {
+                modal.addEventListener('click', function(event) {
+                    if (event.target === modal) {
+                        closeModal();
+                    }
+                });
+            }
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+                    closeModal();
+                }
+            });
+
+            // Dynamically set copyright year
+            const yearElement = document.getElementById('copyright-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+
+</body>
+</html>
