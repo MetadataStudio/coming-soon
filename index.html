@@ -7,11 +7,11 @@
     <meta name="description" content="The new version of Metadata Studio is launching soon! Get ready for an AI-powered studio with multi-provider support (Gemini, OpenAI), advanced automation, and a privacy-first design to instantly generate titles, descriptions, and keywords for your media. Sign up for early access and updates.">
     <meta name="keywords" content="metadata generator, AI metadata, image keywords, video keywords, SEO, stock photography, stock video, creative workflow, coming soon, Gemini API, OpenAI, Anthropic, content creator tools, EXIF editor, IPTC editor, workflow automation">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://metadatastudio.app" />
+    <link rel="canonical" href="https://metadatastudio.app/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://metadatastudio.app">
+    <meta property="og:url" content="https://metadatastudio.app/">
     <meta property="og:title" content="Metadata Studio | The Future of Metadata Generation is Coming Soon">
     <meta property="og:description" content="Supercharge your workflow with multi-provider AI, advanced automation, and a privacy-first design. Sign up for early access.">
     <meta property="og:image" content="https://raw.githubusercontent.com/MetadataStudio/media/refs/heads/main/img/MetadataStudio-Social-Card-by-AFLAHZAMAN.png">
@@ -19,7 +19,7 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://metadatastudio.app/coming-soon.html">
+    <meta property="twitter:url" content="https://metadatastudio.app/">
     <meta property="twitter:title" content="Metadata Studio | The Future of Metadata Generation is Coming Soon">
     <meta property="twitter:description" content="Supercharge your workflow with multi-provider AI, advanced automation, and a privacy-first design. Sign up for early access.">
     <meta property="twitter:image" content="https://raw.githubusercontent.com/MetadataStudio/media/refs/heads/main/img/MetadataStudio-Social-Card-by-AFLAHZAMAN.png">
@@ -100,16 +100,25 @@
       .modal-fade-in {
         animation: fadeIn 0.3s ease-out forwards;
       }
+      #interactive-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+      }
     </style>
 </head>
 <body class="bg-brand-light dark:bg-black text-base text-neutral-800 dark:text-neutral-200 font-sans antialiased">
+    
+    <canvas id="interactive-bg"></canvas>
 
-    <div class="relative min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden">
-        <div class="absolute inset-0 -z-10">
-            <div class="absolute inset-0 bg-gradient-to-b from-white to-brand-light dark:from-neutral-950 dark:to-black opacity-60"></div>
-            <div class="absolute left-1/2 top-0 h-[50rem] w-[50rem] -translate-x-1/2 rounded-full bg-brand-accent/10 blur-3xl"></div>
-        </div>
-
+    <div class="content-wrapper relative min-h-screen flex flex-col items-center justify-center p-4 pb-20 overflow-hidden">
         <main class="text-center z-10 w-full max-w-5xl mx-auto">
             <div class="fade-in">
                 <div class="flex items-center justify-center gap-3 mb-6">
@@ -172,6 +181,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Modal Logic
             const modal = document.getElementById('form-modal');
             const openBtn = document.getElementById('open-modal-btn');
             const closeBtn = document.getElementById('close-modal-btn');
@@ -188,33 +198,161 @@
                 document.body.style.overflow = '';
             };
 
-            if (openBtn) {
-                openBtn.addEventListener('click', openModal);
-            }
-            if (closeBtn) {
-                closeBtn.addEventListener('click', closeModal);
-            }
+            if (openBtn) openBtn.addEventListener('click', openModal);
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
 
-            // Close modal on backdrop click
             if (modal) {
-                modal.addEventListener('click', function(event) {
-                    if (event.target === modal) {
-                        closeModal();
-                    }
+                modal.addEventListener('click', (event) => {
+                    if (event.target === modal) closeModal();
                 });
             }
 
-            // Close modal with Escape key
-            document.addEventListener('keydown', function(event) {
+            document.addEventListener('keydown', (event) => {
                 if (event.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
                     closeModal();
                 }
             });
 
-            // Dynamically set copyright year
+            // Copyright Year
             const yearElement = document.getElementById('copyright-year');
-            if (yearElement) {
-                yearElement.textContent = new Date().getFullYear();
+            if (yearElement) yearElement.textContent = new Date().getFullYear();
+
+            // Interactive Background Logic
+            const canvas = document.getElementById('interactive-bg');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                let particlesArray;
+
+                const mouse = {
+                    x: undefined,
+                    y: undefined,
+                    radius: 150
+                };
+
+                window.addEventListener('mousemove', (event) => {
+                    mouse.x = event.x;
+                    mouse.y = event.y;
+                });
+                
+                window.addEventListener('mouseout', () => {
+                    mouse.x = undefined;
+                    mouse.y = undefined;
+                });
+
+                class Particle {
+                    constructor(x, y, directionX, directionY, size, color) {
+                        this.x = x;
+                        this.y = y;
+                        this.directionX = directionX;
+                        this.directionY = directionY;
+                        this.size = size;
+                        this.color = color;
+                    }
+
+                    draw() {
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                        ctx.fillStyle = this.color;
+                        ctx.fill();
+                    }
+
+                    update() {
+                        if (this.x > canvas.width || this.x < 0) {
+                            this.directionX = -this.directionX;
+                        }
+                        if (this.y > canvas.height || this.y < 0) {
+                            this.directionY = -this.directionY;
+                        }
+                        
+                        if (mouse.x !== undefined && mouse.y !== undefined) {
+                            let dx = mouse.x - this.x;
+                            let dy = mouse.y - this.y;
+                            let distance = Math.sqrt(dx * dx + dy * dy);
+                            if (distance < mouse.radius + this.size) {
+                                if (mouse.x < this.x && this.x < canvas.width - this.size * 10) this.x += 1;
+                                if (mouse.x > this.x && this.x > this.size * 10) this.x -= 1;
+                                if (mouse.y < this.y && this.y < canvas.height - this.size * 10) this.y += 1;
+                                if (mouse.y > this.y && this.y > this.size * 10) this.y -= 1;
+                            }
+                        }
+
+                        this.x += this.directionX;
+                        this.y += this.directionY;
+                        this.draw();
+                    }
+                }
+
+                function init() {
+                    particlesArray = [];
+                    let numberOfParticles = (canvas.height * canvas.width) / 11000;
+                    for (let i = 0; i < numberOfParticles; i++) {
+                        let size = (Math.random() * 2) + 1;
+                        let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                        let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                        let directionX = (Math.random() * 0.4) - 0.2;
+                        let directionY = (Math.random() * 0.4) - 0.2;
+                        let color = 'rgba(16, 185, 129, 0.8)';
+                        particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+                    }
+                }
+
+                function connect() {
+                    const connectDistanceSq = 120 * 120;
+                    for (let a = 0; a < particlesArray.length; a++) {
+                        for (let b = a + 1; b < particlesArray.length; b++) {
+                            let dx = particlesArray[a].x - particlesArray[b].x;
+                            let dy = particlesArray[a].y - particlesArray[b].y;
+                            let distanceSq = dx * dx + dy * dy;
+                            
+                            if (distanceSq < connectDistanceSq) {
+                                let opacityValue = 1 - (distanceSq / connectDistanceSq);
+                                ctx.strokeStyle = `rgba(16, 185, 129, ${opacityValue})`;
+                                ctx.lineWidth = 1;
+                                ctx.beginPath();
+                                ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                                ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                    if (mouse.x !== undefined && mouse.y !== undefined) {
+                        const mouseConnectDistSq = mouse.radius * mouse.radius;
+                        for (let i = 0; i < particlesArray.length; i++) {
+                            let dx = mouse.x - particlesArray[i].x;
+                            let dy = mouse.y - particlesArray[i].y;
+                            let distanceSq = dx*dx + dy*dy;
+                            if(distanceSq < mouseConnectDistSq) {
+                                let opacityValue = 1 - (distanceSq / mouseConnectDistSq);
+                                ctx.strokeStyle = `rgba(209, 250, 229, ${opacityValue * 0.5})`; // emerald-100
+                                ctx.lineWidth = 1;
+                                ctx.beginPath();
+                                ctx.moveTo(mouse.x, mouse.y);
+                                ctx.lineTo(particlesArray[i].x, particlesArray[i].y);
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                }
+
+                function animate() {
+                    requestAnimationFrame(animate);
+                    ctx.clearRect(0, 0, innerWidth, innerHeight);
+                    for (let i = 0; i < particlesArray.length; i++) {
+                        particlesArray[i].update();
+                    }
+                    connect();
+                }
+
+                function handleResize() {
+                    canvas.width = innerWidth;
+                    canvas.height = innerHeight;
+                    init();
+                }
+
+                window.addEventListener('resize', handleResize);
+                
+                handleResize(); // Set initial size and initialize particles
+                animate();
             }
         });
     </script>
