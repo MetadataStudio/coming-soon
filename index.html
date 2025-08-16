@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Metadata Studio | Coming Soon - The Future of Metadata Generation</title>
-    <meta name="description" content="The new version of Metadata Studio is launching soon! Get ready for an AI-powered studio with multi-provider support (Gemini, OpenAI), advanced automation, and a privacy-first design to instantly generate titles, descriptions, and keywords for your media. Sign up for early access and updates.">
+    <title>Metadata Studio (Coming Soon) | Stop Tagging. Start Creating.</title>
+    <meta name="description" content="The new Metadata Studio is launching soon. Stop tagging, start creating. Use AI to generate commercially-focused metadata that sells more photos and videos. Save hours and boost your discoverability. Sign up for early access.">
     <meta name="keywords" content="metadata generator, AI metadata, image keywords, video keywords, SEO, stock photography, stock video, creative workflow, coming soon, Gemini API, OpenAI, Anthropic, content creator tools, EXIF editor, IPTC editor, workflow automation">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://metadatastudio.app/" />
@@ -12,16 +12,16 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://metadatastudio.app/">
-    <meta property="og:title" content="Metadata Studio | The Future of Metadata Generation is Coming Soon">
-    <meta property="og:description" content="Supercharge your workflow with multi-provider AI, advanced automation, and a privacy-first design. Sign up for early access.">
+    <meta property="og:title" content="Metadata Studio (Coming Soon) | Stop Tagging. Start Creating.">
+    <meta property="og:description" content="Use AI to generate metadata that sells more photos & videos. Save hours and boost discoverability. Sign up for early access.">
     <meta property="og:image" content="https://raw.githubusercontent.com/MetadataStudio/media/refs/heads/main/img/MetadataStudio-Social-Card-by-AFLAHZAMAN.png">
     <meta property="og:site_name" content="Metadata Studio">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://metadatastudio.app/">
-    <meta property="twitter:title" content="Metadata Studio | The Future of Metadata Generation is Coming Soon">
-    <meta property="twitter:description" content="Supercharge your workflow with multi-provider AI, advanced automation, and a privacy-first design. Sign up for early access.">
+    <meta property="twitter:title" content="Metadata Studio (Coming Soon) | Stop Tagging. Start Creating.">
+    <meta property="twitter:description" content="Use AI to generate metadata that sells more photos & videos. Save hours and boost discoverability. Sign up for early access.">
     <meta property="twitter:image" content="https://raw.githubusercontent.com/MetadataStudio/media/refs/heads/main/img/MetadataStudio-Social-Card-by-AFLAHZAMAN.png">
     <meta name="twitter:creator" content="@itsaflahzaman">
 
@@ -52,22 +52,54 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Metadata Studio",
-      "description": "An AI-powered studio to instantly generate titles, descriptions, and keywords for images and videos. Streamline your creative workflow, optimize for SEO, and save hours of manual work. The new version features multi-provider AI support (Google Gemini, OpenAI, Anthropic), advanced automation tools, and a privacy-first design.",
-      "applicationCategory": "MultimediaApplication",
-      "operatingSystem": "Web",
-      "author": {
-        "@type": "Person",
-        "name": "AFLAH ZAMAN",
-        "url": "https://aflahzaman.com"
-      },
-      "publisher": {
-        "@type": "Person",
-        "name": "AFLAH ZAMAN",
-        "url": "https://aflahzaman.com"
-      },
-       "featureList": [
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://metadatastudio.app/#website",
+          "url": "https://metadatastudio.app/",
+          "name": "Metadata Studio",
+          "inLanguage": "en-US",
+          "description": "An AI-powered studio to instantly generate titles, descriptions, and keywords for images and videos. Streamline your creative workflow, optimize for SEO, and save hours of manual work.",
+          "publisher": {
+            "@type": "Person",
+            "name": "AFLAH ZAMAN",
+            "url": "https://aflahzaman.com"
+          },
+          "potentialAction": {
+            "@type": "SubscribeAction",
+            "name": "Get Early Access",
+            "target": {
+              "@type": "EntryPoint",
+              "url": "https://docs.google.com/forms/d/e/1FAIpQLScfq5jkXZveUdXCTuZN3XQpnOWi75lCWyK209o7kk2Pn41SuA/viewform"
+            }
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://metadatastudio.app/#softwareapplication",
+          "name": "Metadata Studio",
+          "mainEntityOfPage": {"@id": "https://metadatastudio.app/#website"},
+          "description": "The new version of Metadata Studio uses AI from Google Gemini, OpenAI, and more to generate commercially-focused metadata that sells more photos and videos. Save hours on every shoot and improve your discoverability on stock media platforms.",
+          "applicationCategory": "MultimediaApplication",
+          "operatingSystem": "Web",
+          "softwareVersion": "2.0",
+          "releaseNotes": "The upcoming version introduces multi-provider AI support, advanced automation features like automatic file renaming and ZIP exports, a refined user interface for both image and video workflows, and continued commitment to a privacy-first design.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "AFLAH ZAMAN",
+            "url": "https://aflahzaman.com"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "AFLAH ZAMAN",
+            "url": "https://aflahzaman.com"
+          },
+          "featureList": [
             "AI-Powered Metadata Generation (Titles, Descriptions, Keywords)",
             "Support for Google Gemini, OpenAI, Anthropic, and custom models",
             "Privacy-First Design: Your files are processed securely in your browser.",
@@ -76,14 +108,39 @@
             "Read and Write Image EXIF/IPTC Data",
             "Automatic file renaming based on titles",
             "Download all media and metadata in a single ZIP archive"
-       ],
-      "potentialAction": {
-        "@type": "SubscribeAction",
-        "target": {
-          "@type": "EntryPoint",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLScfq5jkXZveUdXCTuZN3XQpnOWi75lCWyK209o7kk2Pn41SuA/viewform"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://metadatastudio.app/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What's new in the upcoming version of Metadata Studio?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The new version is a major upgrade! Key features include multi-provider AI support (Google Gemini, OpenAI, Anthropic, and custom models), a full suite of automation tools (like file renaming and ZIP exporting), a dedicated video workflow, and an enhanced user interface, all while maintaining our strict privacy-first principles."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "When will the new version be released?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We are targeting a release soon. The best way to stay informed is to sign up for the early access list. You'll be the first to know when it goes live and may get access before the public launch."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Will the tool still be free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, the core functionality of Metadata Studio will remain free to use. It operates on a 'bring your own API key' model, so your only costs are related to your own usage with your chosen AI provider (many of whom offer generous free tiers)."
+              }
+            }
+          ]
         }
-      }
+      ]
     }
     </script>
     <style>
@@ -134,10 +191,10 @@
                 </div>
 
                 <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-900 dark:text-white max-w-4xl mx-auto">
-                    Re-imagined for the AI Era.
+                    Stop Tagging. Start Creating.
                 </h2>
                 <p class="mt-6 text-lg lg:text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
-                    We're building the next generation of Metadata Studio from the ground up to be the smartest, fastest, and most secure way to manage your creative assets. Get ready to supercharge your workflow.
+                    The new Metadata Studio uses AI to generate commercially-focused titles, descriptions, and keywords that sell more photos. Save hours on every shoot and improve your discoverability on stock media platforms.
                 </p>
             </div>
 
@@ -148,7 +205,12 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>
                 </button>
-                <p class="mt-4 text-sm text-neutral-500">Be the first to know when we launch.</p>
+                <div class="mt-6 text-base text-neutral-500">
+                    <a href="https://aflahzaman.com/metadata-studio-discord" target="_blank" rel="noopener noreferrer" class="font-semibold text-brand-primary dark:text-brand-accent hover:underline transition-colors inline-flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M20.283,5.167a1.62,1.62,0,0,0-1.55-1.01H17.3a13.6,13.6,0,0,0-10.6,0H5.267a1.62,1.62,0,0,0-1.55,1.01,15.11,15.11,0,0,0-1.5,8.12A13.25,13.25,0,0,0,6.05,20.5a1.6,1.6,0,0,0,.92.42,1.65,1.65,0,0,0,.86-.22,12.6,12.6,0,0,0,4.34-2.58,1,1,0,0,1,1.42,0,12.6,12.6,0,0,0,4.34,2.58,1.65,1.65,0,0,0,.86.22,1.6,1.6,0,0,0,.92-.42A13.25,13.25,0,0,0,21.783,13.287,15.11,15.11,0,0,0,20.283,5.167ZM8.75,15a2.44,2.44,0,0,1-2.43-2.43,2.44,2.44,0,0,1,2.43-2.43,2.44,2.44,0,0,1,0,4.86Zm6.5,0a2.44,2.44,0,0,1-2.43-2.43,2.44,2.44,0,0,1,2.43-2.43,2.44,2.44,0,0,1,0,4.86Z"/></svg>
+                        Join the Discord community to get updates & shape the future of the tool.
+                    </a>
+                </div>
             </div>
         </main>
 
