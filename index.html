@@ -175,7 +175,7 @@
     
     <canvas id="interactive-bg"></canvas>
 
-    <div class="content-wrapper relative min-h-screen flex flex-col items-center justify-center p-4 pb-20 overflow-hidden">
+    <div class="content-wrapper relative min-h-screen flex flex-col items-center justify-center p-4 pt-16 sm:pt-24 pb-32 sm:pb-48 overflow-hidden">
         <main class="text-center z-10 w-full max-w-5xl mx-auto">
             <div class="fade-in">
                 <div class="flex items-center justify-center gap-3 mb-6">
@@ -193,12 +193,13 @@
                 <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-900 dark:text-white max-w-4xl mx-auto">
                     Stop Tagging. Start Creating.
                 </h2>
-                <p class="mt-6 text-lg lg:text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
-                    The new Metadata Studio uses AI to generate commercially-focused titles, descriptions, and keywords that sell more photos. Save hours on every shoot and improve your discoverability on stock media platforms.
-                </p>
             </div>
-
-            <div class="mt-16 fade-in fade-in-delay-1">
+            
+            <p class="mt-6 text-lg lg:text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto fade-in fade-in-delay-1">
+                The new Metadata Studio is a professional workflow tool that uses your choice of AI to generate commercially-focused metadata. Sell more photos, save hours on every project, and reclaim your creative time.
+            </p>
+            
+            <div class="mt-10 fade-in fade-in-delay-2">
                 <button id="open-modal-btn" class="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-bold text-white bg-brand-primary rounded-full shadow-lg hover:bg-opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary transition-all transform hover:scale-105">
                     <span>Get Early Access</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -208,10 +209,35 @@
                 <div class="mt-6 text-base text-neutral-500">
                     <a href="https://aflahzaman.com/metadata-studio-discord" target="_blank" rel="noopener noreferrer" class="font-semibold text-brand-primary dark:text-brand-accent hover:underline transition-colors inline-flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M20.283,5.167a1.62,1.62,0,0,0-1.55-1.01H17.3a13.6,13.6,0,0,0-10.6,0H5.267a1.62,1.62,0,0,0-1.55,1.01,15.11,15.11,0,0,0-1.5,8.12A13.25,13.25,0,0,0,6.05,20.5a1.6,1.6,0,0,0,.92.42,1.65,1.65,0,0,0,.86-.22,12.6,12.6,0,0,0,4.34-2.58,1,1,0,0,1,1.42,0,12.6,12.6,0,0,0,4.34,2.58,1.65,1.65,0,0,0,.86.22,1.6,1.6,0,0,0,.92-.42A13.25,13.25,0,0,0,21.783,13.287,15.11,15.11,0,0,0,20.283,5.167ZM8.75,15a2.44,2.44,0,0,1-2.43-2.43,2.44,2.44,0,0,1,2.43-2.43,2.44,2.44,0,0,1,0,4.86Zm6.5,0a2.44,2.44,0,0,1-2.43-2.43,2.44,2.44,0,0,1,2.43-2.43,2.44,2.44,0,0,1,0,4.86Z"/></svg>
-                        Join the Discord community to get updates & shape the future of the tool.
+                        Join our Discord community to get updates & shape the future of the tool.
                     </a>
                 </div>
             </div>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-10 text-center max-w-5xl mx-auto fade-in fade-in-delay-3">
+                <div class="flex flex-col items-center">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-brand-light dark:bg-brand-accent/20 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-brand-primary dark:text-brand-accent"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.553L16.5 21.75l-.398-1.197a3.375 3.375 0 00-2.456-2.456L12.75 18l1.197-.398a3.375 3.375 0 002.456-2.456L16.5 14.25l.398 1.197a3.375 3.375 0 002.456 2.456L20.25 18l-1.197.398a3.375 3.375 0 00-2.456 2.456z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-neutral-900 dark:text-white">Multi-Provider AI</h3>
+                    <p class="text-neutral-600 dark:text-neutral-400">Generate superior metadata with your choice of AI: Google Gemini, OpenAI, Anthropic, and more.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                     <div class="flex items-center justify-center w-12 h-12 rounded-full bg-brand-light dark:bg-brand-accent/20 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-brand-primary dark:text-brand-accent"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25l-4.5-4.5L12 8.25l-4.5-4.5L3 8.25M3 14.25l4.5-4.5L12 14.25l4.5-4.5L21 14.25M3 20.25l4.5-4.5L12 20.25l4.5-4.5L21 20.25M3 8.25v9.75a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-neutral-900 dark:text-white">Full Workflow Automation</h3>
+                    <p class="text-neutral-600 dark:text-neutral-400">From upload to export in minutes with file renaming, CSV import/export, and single-click ZIP downloads.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                     <div class="flex items-center justify-center w-12 h-12 rounded-full bg-brand-light dark:bg-brand-accent/20 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-brand-primary dark:text-brand-accent"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-neutral-900 dark:text-white">Privacy-First by Design</h3>
+                    <p class="text-neutral-600 dark:text-neutral-400">Your files and API keys are never stored on our servers. Period.</p>
+                </div>
+            </div>
+
         </main>
 
         <footer class="absolute bottom-0 left-0 right-0 p-4 z-10">
